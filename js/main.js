@@ -125,8 +125,12 @@ function calculateAndDisplayRoute(
       if (status === "OK") {
         // @hasna disini response nya
         let path = response.routes[0].overview_path;
-        let latlon = path.map((p) => ({ lat: p.lat(), lng: p.lng() }));
-        console.log(latlon);
+        let lat = path.map((p) => (p.lat()));
+        let lon = path.map((p) => ( p.lng()));
+        sessionStorage.setItem("lat", JSON.stringify(lat));
+        sessionStorage.setItem("lon", JSON.stringify(lon));
+        console.log(lat);
+        console.log(lon);
         directionsDisplay.setDirections(response);
         displayPathElevation(path, elevator);
         showARButton();
