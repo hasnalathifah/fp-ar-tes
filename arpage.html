@@ -12,7 +12,7 @@
     </script>
 </head>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
        vr-mode-ui="enabled: false"
@@ -20,5 +20,11 @@
         arjs='sourceType: webcam; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         <a-camera gps-new-camera rotation-reader>
 		</a-camera>
+        <a-assets>
+            <a-asset-item
+                id="animated-asset"
+                src="assets/arrow.glb"
+            ></a-asset-item>
+        </a-assets>
 	</a-scene>
 </body>
