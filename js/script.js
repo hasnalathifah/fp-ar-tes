@@ -25,12 +25,12 @@ window.onload = () => {
     for (let i = 0; i < lon.length; i++) {
         let latitude = lat[i];
         let longitude = lon[i];
-        let model = document.createElement('a-entity');
+        let model = document.createElement('a-box');
         model.setAttribute('gps-new-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        // model.setAttribute('material', { color: 'blue' } );
-        model.setAttribute('look-at', '[gps-new-camera]')
-        model.setAttribute('gltf-model', '#animated-asset');
-        model.setAttribute('animation-mixer', 'loop: repeat');
+        model.setAttribute('material', { color: 'blue' } );
+        // model.setAttribute('look-at', '[gps-new-camera]')
+        // model.setAttribute('gltf-model', '#animated-asset');
+        // model.setAttribute('animation-mixer', 'loop: repeat');
         model.setAttribute('scale', '0.6633601288757837 0.6633601288757837 0.6633601288757837');
 
         model.addEventListener('loaded', () => {
