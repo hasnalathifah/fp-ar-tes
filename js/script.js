@@ -17,7 +17,7 @@ window.onload = () => {
         let model = document.createElement('a-entity');
         model.setAttribute('gps-new-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         // model.setAttribute('material', { color: 'blue' } );
-        // model.setAttribute('look-at', '[gps-new-camera]');
+        model.setAttribute('look-at', '[gps-new-camera]');
         model.setAttribute('id', 'target'+i);
         if (i != lat.length-1) {
             model.setAttribute('look-at', '#target'+(i+1));
