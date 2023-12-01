@@ -31,9 +31,13 @@ window.onload = () => {
         model.setAttribute('gps-new-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         // model.setAttribute('material', { color: 'blue' } );
         model.setAttribute('look-at', '[gps-new-camera]');
-        model.setAttribute('id', 'target'+i);
-        if (i != 0) {
-            model.setAttribute('look-at', '#target'+(i-1));
+        let id = 'target'+i;
+        let target = '#target'+(i+1);
+        console.log(id);
+        console.log(target);
+        model.setAttribute('id', id);
+        if (i != lat.length-1) {
+            model.setAttribute('look-at', target);
         } 
         model.setAttribute('gltf-model', '#animated-asset');
         model.setAttribute('animation-mixer', 'loop: repeat');
