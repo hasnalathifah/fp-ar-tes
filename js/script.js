@@ -38,8 +38,11 @@ window.onload = () => {
             model.setAttribute('look-at', target);
             console.log(id);
             console.log(target);
+            model.setAttribute('gltf-model', '#arrow');
         } 
-        model.setAttribute('gltf-model', '#animated-asset');
+        else{
+            model.setAttribute('gltf-model', '#location');
+        }
         model.setAttribute('animation-mixer', 'loop: repeat');
         model.setAttribute('scale', '0.6633601288757837 0.6633601288757837 0.6633601288757837');
 
