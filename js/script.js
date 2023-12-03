@@ -32,9 +32,9 @@ window.onload = () => {
         // model.setAttribute('material', { color: 'blue' } );
         model.setAttribute('look-at', '[gps-new-camera]');
         let id = 'target'+i;
-        let target = '#target'+(i-1);
+        let target = '#target'+(i+1);
         model.setAttribute('id', id);
-        if (i != 0) {
+        if (i != lat.length-1) {
             model.setAttribute('look-at', target);
             console.log(id);
             console.log(target);
