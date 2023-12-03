@@ -22,7 +22,7 @@ window.onload = () => {
     // console.log(lat);
     // console.log(lon);
   
-    for (let i = 0; i < lat.length; i++) {
+    for (let i = lat.length-1; i > -1; i--) {
         let latitude = lat[i];
         let longitude = lon[i];
         console.log(latitude);
